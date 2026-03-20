@@ -12,7 +12,7 @@
         }
 
         body {
-            background: #f0ece5;
+            background: #f8f3ec; /* lebih cerah */
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             min-height: 100vh;
             display: flex;
@@ -28,7 +28,7 @@
             width: 100%;
             background: #ffffff;
             border-radius: 40px;
-            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.1);
             padding: 40px 40px 48px;
             border: 1px solid #e0d7cb;
         }
@@ -74,7 +74,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 8px 16px rgba(100, 70, 30, 0.15);
+            box-shadow: 0 8px 16px rgba(100, 70, 30, 0.1);
             border: 2px solid #b89f7a;
         }
 
@@ -116,13 +116,13 @@
             transition: all 0.2s ease;
             border: 1px solid #4a4036;
             letter-spacing: 1.5px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
         }
 
         .go-btn:hover {
             background: #403a32;
             transform: translateY(-3px);
-            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
         }
 
         /* Flashcard screen */
@@ -167,21 +167,21 @@
 
         /* Wood card */
         .wood-card {
-            background: #e2d4bf;
-            background: linear-gradient(145deg, #e8ddcb, #d4c3aa);
+            background: #e8dac6; /* lebih cerah */
+            background: linear-gradient(145deg, #eee2d0, #dacbb6);
             border-radius: 48px;
             padding: 30px;
             margin-bottom: 30px;
             border: 1px solid #b9a58a;
-            box-shadow: inset 0 1px 5px #fff8ed, 0 15px 22px -10px rgba(70, 50, 30, 0.2);
+            box-shadow: inset 0 1px 5px #fff8ed, 0 15px 22px -10px rgba(70, 50, 30, 0.15);
         }
 
         .canvas-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #cbb99b;
-            background: radial-gradient(circle at 30% 30%, #dacbb0, #bba787);
+            background: #d2c0a8; /* lebih cerah */
+            background: radial-gradient(circle at 30% 30%, #e0d2bc, #c5b297);
             border-radius: 36px;
             padding: 25px;
             border: 1px solid #9f8b6f;
@@ -193,18 +193,18 @@
             width: 100%;
             max-width: 800px;
             height: auto;
-            background: #d9c8b0;
+            background: #e0d0b8; /* lebih cerah */
             border-radius: 32px;
             padding: 30px 25px;
-            box-shadow: inset 0 0 0 1px #b6a182, 0 10px 20px rgba(60, 40, 20, 0.2);
+            box-shadow: inset 0 0 0 1px #b6a182, 0 10px 20px rgba(60, 40, 20, 0.15);
         }
 
         .number-display {
             text-align: center;
             font-size: 4.5rem;
-            font-weight: 400;
+            font-weight: 800; /* lebih bold */
             color: #352d22;
-            background: #f1e7d9;
+            background: #f5ebdd; /* lebih cerah */
             margin: 24px 100px 0;
             border-radius: 70px;
             padding: 12px 0;
@@ -303,12 +303,12 @@
 </head>
 <body>
     <div class="card-app">
-        <!-- Header EONGENESIS.ID - Tengah, Bold, Font Menarik -->
+        <!-- Header EONGENESIS.ID -->
         <div class="eogenesis-header">
             <h1>EONGENESIS.ID</h1>
         </div>
 
-        <!-- HOME SCREEN dengan logo dan slogan -->
+        <!-- HOME SCREEN -->
         <div id="homeScreen" class="home-screen">
             <div class="logo-container">
                 <div class="abacus-logo">
@@ -410,13 +410,12 @@
                 );
             }
 
-            // GAMBAR SEMPOA - Manik lebih bulat (ellipse mendekati lingkaran)
-            // Warna tidak aktif lebih cerah (tidak kusam)
+            // GAMBAR SEMPOA - Manik lebih bulat, diameter lebih besar
             function drawSoroban(number) {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-                // Latar belakang polos nude
-                ctx.fillStyle = '#d9c8b0';
+                // Latar belakang polos nude lebih cerah
+                ctx.fillStyle = '#e0d0b8'; // lebih cerah
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
                 // Bingkai
@@ -461,7 +460,7 @@
                     ctx.stroke();
                 }
 
-                // MANIK - lebih bulat (ellipse dengan radius hampir sama) dan warna tidak aktif lebih cerah
+                // MANIK - diameter lebih besar (radiusX=26, radiusY=28)
                 const numStr = number.toString().padStart(5, '0');
                 for (let col = 0; col < 5; col++) {
                     const digit = parseInt(numStr[col], 10);
@@ -469,44 +468,42 @@
                     const bottomActive = digit % 5;
                     const xCenter = startX + col * gap;
 
-                    // Manik atas - lebih bulat (radiusX=24, radiusY=26)
+                    // Manik atas
                     const yTop = 110;
                     ctx.shadowBlur = 10;
                     ctx.shadowColor = '#4f3a1f';
 
-                    const gradTop = ctx.createRadialGradient(xCenter-4, yTop-6, 8, xCenter, yTop, 32);
+                    const gradTop = ctx.createRadialGradient(xCenter-4, yTop-6, 8, xCenter, yTop, 34);
                     if (topActive) {
                         gradTop.addColorStop(0, '#ffecb3');
                         gradTop.addColorStop(0.5, '#e5b048');
                         gradTop.addColorStop(1, '#b07d34');
                     } else {
-                        // Warna tidak aktif lebih cerah
                         gradTop.addColorStop(0, '#d9bc8b');
                         gradTop.addColorStop(0.6, '#b08d56');
                         gradTop.addColorStop(1, '#8a663a');
                     }
                     ctx.fillStyle = gradTop;
                     ctx.beginPath();
-                    ctx.ellipse(xCenter, yTop, 24, 26, 0, 0, Math.PI*2); // lebih bulat
+                    ctx.ellipse(xCenter, yTop, 26, 28, 0, 0, Math.PI*2); // lebih besar
                     ctx.fill();
                     ctx.strokeStyle = '#624a28';
                     ctx.lineWidth = 2.5;
                     ctx.stroke();
 
-                    // Manik bawah - lebih bulat, jarak 60px
+                    // Manik bawah
                     const startBottom = 235;
                     const step = 60;
                     for (let m = 0; m < 4; m++) {
                         let yPos = startBottom + m * step;
                         const aktif = m < bottomActive;
 
-                        const gradBottom = ctx.createRadialGradient(xCenter-4, yPos-6, 8, xCenter, yPos, 32);
+                        const gradBottom = ctx.createRadialGradient(xCenter-4, yPos-6, 8, xCenter, yPos, 34);
                         if (aktif) {
                             gradBottom.addColorStop(0, '#ffedb3');
                             gradBottom.addColorStop(0.5, '#e8b44e');
                             gradBottom.addColorStop(1, '#b8863a');
                         } else {
-                            // Warna tidak aktif lebih cerah
                             gradBottom.addColorStop(0, '#d9bc8b');
                             gradBottom.addColorStop(0.6, '#b08d56');
                             gradBottom.addColorStop(1, '#8a663a');
@@ -514,7 +511,7 @@
                         ctx.fillStyle = gradBottom;
                         ctx.shadowBlur = 12;
                         ctx.beginPath();
-                        ctx.ellipse(xCenter, yPos, 24, 26, 0, 0, Math.PI*2); // lebih bulat
+                        ctx.ellipse(xCenter, yPos, 26, 28, 0, 0, Math.PI*2); // lebih besar
                         ctx.fill();
                         ctx.strokeStyle = '#624a28';
                         ctx.lineWidth = 2.5;
