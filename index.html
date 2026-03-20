@@ -12,119 +12,125 @@
         }
 
         body {
-            background: #f8f3ec;
+            background: #f5f2ee;
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 12px;
-            color: #2c2a25;
+            padding: 16px;
+            color: #2e2a26;
         }
 
-        /* Card utama - full width untuk mobile */
+        /* Card utama - clean, international style */
         .card-app {
-            max-width: 500px; /* Optimal untuk portrait mobile */
+            max-width: 520px;
             width: 100%;
             background: #ffffff;
-            border-radius: 32px;
-            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
-            padding: 24px 20px 32px;
-            border: 1px solid #e0d7cb;
+            border-radius: 36px;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.12);
+            padding: 28px 24px 32px;
+            border: 1px solid #e8e0d6;
         }
 
-        /* Header EONGENESIS.ID */
+        /* Header EONGENESIS.ID - premium */
         .eogenesis-header {
-            margin-bottom: 20px;
-            border-bottom: 1px solid #dcd1c2;
-            padding-bottom: 16px;
+            margin-bottom: 24px;
             text-align: center;
         }
 
         .eogenesis-header h1 {
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            color: #3a3228;
-            text-transform: uppercase;
-            font-family: 'Poppins', 'Inter', sans-serif;
-            background: linear-gradient(135deg, #4a3f33, #2c241b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #2c2a27;
+            font-family: 'Inter', 'Poppins', sans-serif;
+            position: relative;
+            display: inline-block;
         }
 
-        /* HOME SCREEN - mobile portrait */
+        .eogenesis-header h1:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 25%;
+            width: 50%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #b89f7a, transparent);
+        }
+
+        /* HOME SCREEN - profesional modern */
         .home-screen {
             text-align: center;
-            padding: 20px 10px 40px;
+            padding: 20px 10px 30px;
         }
 
         .logo-container {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .abacus-logo {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             margin: 0 auto;
-            background: #d9c8b0;
+            background: #f0e9de;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 6px 12px rgba(100, 70, 30, 0.1);
-            border: 2px solid #b89f7a;
+            box-shadow: 0 10px 20px -8px rgba(90, 70, 40, 0.2);
+            border: 1px solid #d4c5b0;
         }
 
         .abacus-logo svg {
-            width: 45px;
-            height: 45px;
+            width: 48px;
+            height: 48px;
         }
 
         .home-screen h2 {
-            font-size: 2.2rem;
-            font-weight: 400;
-            color: #353027;
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: #2e2923;
             margin-bottom: 12px;
-            font-family: 'Times New Roman', serif;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.5px;
         }
 
         .home-screen .slogan {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #3a3228;
-            margin-bottom: 36px;
-            letter-spacing: 0.5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #7a6b58;
+            margin-bottom: 40px;
+            letter-spacing: 0.3px;
             text-transform: uppercase;
-            background: linear-gradient(135deg, #5f4e38, #2f2a22);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            background: #f0ebe4;
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 40px;
+            border: 1px solid #d9cdbc;
         }
 
         .go-btn {
-            background: #2f2a24;
+            background: #2c2823;
             border: none;
             border-radius: 50px;
-            padding: 14px 50px;
-            font-size: 1.4rem;
+            padding: 16px 50px;
+            font-size: 1.3rem;
             font-weight: 500;
             color: white;
             cursor: pointer;
             transition: all 0.2s ease;
             border: 1px solid #4a4036;
-            letter-spacing: 1px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             width: 80%;
-            max-width: 300px;
+            max-width: 280px;
         }
 
         .go-btn:hover {
-            background: #403a32;
+            background: #3f3a33;
             transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
         }
 
         /* Flashcard screen */
@@ -140,26 +146,26 @@
             border-radius: 50px;
             padding: 6px 16px;
             margin-bottom: 20px;
-            border: 1px solid #d6cbbb;
+            border: 1px solid #ddd2c2;
         }
 
         .timer {
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 500;
             color: #3f372d;
             background: white;
-            padding: 4px 16px;
+            padding: 4px 18px;
             border-radius: 40px;
-            border: 1px solid #cdc0ad;
+            border: 1px solid #d0c2b0;
         }
 
         .counter {
             font-size: 1rem;
             color: #605548;
             background: white;
-            padding: 4px 16px;
+            padding: 4px 18px;
             border-radius: 40px;
-            border: 1px solid #cdc0ad;
+            border: 1px solid #d0c2b0;
         }
 
         .counter span {
@@ -167,55 +173,53 @@
             color: #2f2922;
         }
 
-        /* Wood card - mobile optimized */
+        /* Wood card - refined */
         .wood-card {
-            background: #e8dac6;
-            background: linear-gradient(145deg, #eee2d0, #dacbb6);
+            background: #ede3d5;
+            background: linear-gradient(145deg, #f3e9db, #e2d4c2);
             border-radius: 36px;
-            padding: 16px;
+            padding: 18px;
             margin-bottom: 20px;
-            border: 1px solid #b9a58a;
-            box-shadow: inset 0 1px 4px #fff8ed, 0 10px 18px -8px rgba(70, 50, 30, 0.15);
+            border: 1px solid #cbbaa5;
+            box-shadow: inset 0 1px 4px #fffcf3, 0 12px 20px -10px rgba(80, 60, 35, 0.2);
         }
 
         .canvas-wrapper {
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #d2c0a8;
-            background: radial-gradient(circle at 30% 30%, #e0d2bc, #c5b297);
+            background: #dacbb6;
+            background: radial-gradient(circle at 30% 30%, #e6d9c6, #cfbea5);
             border-radius: 28px;
-            padding: 15px;
-            border: 1px solid #9f8b6f;
-            box-shadow: inset 0 2px 6px #efe3cf;
+            padding: 16px;
+            border: 1px solid #b09b7f;
+            box-shadow: inset 0 2px 6px #f7ecdc;
         }
 
         canvas#sorobanCanvas {
             display: block;
             width: 100%;
-            max-width: 100%;
             height: auto;
-            background: #e0d0b8;
+            background: #e6d8c2;
             border-radius: 24px;
-            padding: 15px 12px;
-            box-shadow: inset 0 0 0 1px #b6a182, 0 8px 16px rgba(60, 40, 20, 0.15);
+            padding: 18px 12px;
+            box-shadow: inset 0 0 0 1px #c2af92, 0 8px 16px rgba(70, 50, 30, 0.15);
         }
 
         .number-display {
             text-align: center;
             font-size: 3.2rem;
-            font-weight: 800;
+            font-weight: 700;
             color: #352d22;
             background: #f5ebdd;
-            margin: 16px 30px 0;
+            margin: 18px 40px 0;
             border-radius: 50px;
             padding: 8px 0;
-            border: 1px solid #cbb392;
-            font-family: 'Times New Roman', serif;
+            border: 1px solid #d4bc9b;
+            font-family: 'Inter', 'Times New Roman', serif;
             box-shadow: inset 0 1px 4px white;
         }
 
-        /* Digit panel - mobile responsive */
         .digit-panel {
             display: flex;
             justify-content: center;
@@ -226,7 +230,7 @@
 
         .digit-option {
             background: white;
-            border: 1px solid #cfc3b2;
+            border: 1px solid #d4c8b6;
             border-radius: 40px;
             padding: 8px 16px;
             font-size: 0.85rem;
@@ -234,14 +238,13 @@
             color: #4d4236;
             cursor: pointer;
             transition: all 0.15s;
-            flex: 0 1 auto;
             min-width: 70px;
             text-align: center;
         }
 
         .digit-option:hover {
             background: #f3ede4;
-            border-color: #a99b88;
+            border-color: #b7a792;
         }
 
         .digit-option.active {
@@ -250,7 +253,6 @@
             color: white;
         }
 
-        /* Navigation - mobile */
         .nav-group {
             display: flex;
             justify-content: center;
@@ -261,7 +263,7 @@
 
         .nav-btn {
             background: white;
-            border: 1px solid #cfc3b2;
+            border: 1px solid #d4c8b6;
             border-radius: 40px;
             padding: 10px 20px;
             font-size: 1rem;
@@ -276,7 +278,7 @@
 
         .nav-btn:hover:not(:disabled) {
             background: #f3ede4;
-            border-color: #a99b88;
+            border-color: #b7a792;
         }
 
         .nav-btn:disabled {
@@ -299,106 +301,66 @@
             margin-top: 16px;
             text-align: center;
             font-size: 0.9rem;
-            color: #86644c;
-            min-height: 40px;
+            color: #8b7257;
+            min-height: 36px;
         }
 
-        /* Small screen adjustments */
+        /* Responsive adjustments */
         @media (max-width: 380px) {
             .card-app {
-                padding: 16px 12px 24px;
+                padding: 20px 16px 24px;
             }
             
             .home-screen h2 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
             
             .home-screen .slogan {
-                font-size: 1.1rem;
+                font-size: 0.9rem;
+                padding: 6px 16px;
             }
             
             .go-btn {
-                padding: 12px 30px;
-                font-size: 1.2rem;
+                padding: 14px 30px;
+                font-size: 1.1rem;
             }
             
             .number-display {
                 font-size: 2.5rem;
-                margin: 12px 15px 0;
-            }
-            
-            .digit-option {
-                padding: 6px 12px;
-                font-size: 0.75rem;
-                min-width: 60px;
-            }
-            
-            .nav-btn {
-                padding: 8px 12px;
-                font-size: 0.9rem;
-                min-width: 80px;
+                margin: 14px 20px 0;
             }
             
             .timer {
-                font-size: 1.1rem;
-                padding: 4px 10px;
-            }
-            
-            .counter {
-                font-size: 0.8rem;
-                padding: 4px 10px;
-            }
-        }
-
-        /* Landscape orientation */
-        @media (orientation: landscape) and (max-height: 600px) {
-            body {
-                padding: 8px;
-            }
-            
-            .card-app {
-                max-width: 700px;
-            }
-            
-            .home-screen {
-                padding: 10px 10px 20px;
-            }
-            
-            .canvas-wrapper {
-                padding: 10px;
-            }
-            
-            canvas#sorobanCanvas {
-                max-height: 300px;
-                width: auto;
+                font-size: 1.2rem;
+                padding: 4px 12px;
             }
         }
     </style>
 </head>
 <body>
     <div class="card-app">
-        <!-- Header EONGENESIS.ID -->
+        <!-- Header EONGENESIS.ID premium -->
         <div class="eogenesis-header">
             <h1>EONGENESIS.ID</h1>
         </div>
 
-        <!-- HOME SCREEN -->
+        <!-- HOME SCREEN profesional -->
         <div id="homeScreen" class="home-screen">
             <div class="logo-container">
                 <div class="abacus-logo">
                     <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="15" y="25" width="70" height="50" rx="8" fill="#b89f7a" stroke="#6b4f2e" stroke-width="3"/>
-                        <line x1="25" y1="35" x2="25" y2="75" stroke="#6b4f2e" stroke-width="4"/>
-                        <line x1="45" y1="35" x2="45" y2="75" stroke="#6b4f2e" stroke-width="4"/>
-                        <line x1="65" y1="35" x2="65" y2="75" stroke="#6b4f2e" stroke-width="4"/>
-                        <circle cx="25" cy="45" r="8" fill="#e0b05a" stroke="#8b5a2b" stroke-width="2"/>
-                        <circle cx="45" cy="60" r="8" fill="#e0b05a" stroke="#8b5a2b" stroke-width="2"/>
-                        <circle cx="65" cy="70" r="8" fill="#e0b05a" stroke="#8b5a2b" stroke-width="2"/>
+                        <rect x="15" y="25" width="70" height="50" rx="8" fill="#dcccae" stroke="#8b724c" stroke-width="3"/>
+                        <line x1="25" y1="35" x2="25" y2="75" stroke="#7d623d" stroke-width="4"/>
+                        <line x1="45" y1="35" x2="45" y2="75" stroke="#7d623d" stroke-width="4"/>
+                        <line x1="65" y1="35" x2="65" y2="75" stroke="#7d623d" stroke-width="4"/>
+                        <circle cx="25" cy="45" r="8" fill="#e8b85c" stroke="#8b5a2b" stroke-width="2"/>
+                        <circle cx="45" cy="60" r="8" fill="#e8b85c" stroke="#8b5a2b" stroke-width="2"/>
+                        <circle cx="65" cy="70" r="8" fill="#e8b85c" stroke="#8b5a2b" stroke-width="2"/>
                     </svg>
                 </div>
             </div>
-            <h2>Your Futuristic Sempoa</h2>
-            <div class="slogan">TRAIN FOCUS, SPEED, AND LOGIC</div>
+            <h2>Futuristic Sempoa</h2>
+            <div class="slogan">Train Focus · Speed · Logic</div>
             <button class="go-btn" id="goBtn">Start</button>
         </div>
 
@@ -411,10 +373,10 @@
                 </div>
             </div>
 
-            <!-- Kartu kayu -->
+            <!-- Kartu kayu dengan sempoa full dan rapi -->
             <div class="wood-card">
                 <div class="canvas-wrapper">
-                    <canvas id="sorobanCanvas" width="600" height="400"></canvas>
+                    <canvas id="sorobanCanvas" width="500" height="400"></canvas>
                 </div>
                 <div class="number-display" id="angkaDisplay">0</div>
             </div>
@@ -468,16 +430,6 @@
 
             totalCardsSpan.textContent = TOTAL_CARDS;
 
-            // Ukuran canvas responsif
-            function resizeCanvas() {
-                const container = canvas.parentElement;
-                const containerWidth = container.clientWidth;
-                // Set canvas dimensions proportionally
-                canvas.width = Math.min(600, containerWidth - 20);
-                canvas.height = Math.floor(canvas.width * 0.67); // 600x400 ratio
-                refreshCard();
-            }
-
             // Generate angka acak
             function generateRandomNumbers(digitMode) {
                 let min = 0, max = 0;
@@ -494,81 +446,82 @@
                 );
             }
 
-            // GAMBAR SEMPOA - dengan ukuran proporsional
+            // GAMBAR SEMPOA - struktur rapi, full layar, tidak condong, beads bawah tidak melewati frame
             function drawSoroban(number) {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-                // Hitung skala berdasarkan lebar canvas (referensi 600px)
-                const scale = canvas.width / 600;
-                
-                // Fungsi untuk menskalakan nilai
-                const scaleX = (x) => x * scale;
-                const scaleY = (y) => y * scale;
-
                 // Latar belakang polos nude
-                ctx.fillStyle = '#e0d0b8';
+                ctx.fillStyle = '#e6d8c2';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-                // Bingkai
-                ctx.strokeStyle = '#7d6345';
-                ctx.lineWidth = 14 * scale;
-                ctx.strokeRect(18 * scale, 18 * scale, canvas.width - 36 * scale, canvas.height - 36 * scale);
-                ctx.strokeStyle = '#b39873';
-                ctx.lineWidth = 4 * scale;
-                ctx.strokeRect(28 * scale, 28 * scale, canvas.width - 56 * scale, canvas.height - 56 * scale);
+                // Bingkai - lebih proporsional
+                ctx.strokeStyle = '#8b724c';
+                ctx.lineWidth = 12;
+                ctx.strokeRect(12, 12, canvas.width - 24, canvas.height - 24);
+                
+                ctx.strokeStyle = '#c2af92';
+                ctx.lineWidth = 3;
+                ctx.strokeRect(18, 18, canvas.width - 36, canvas.height - 36);
 
-                // Palang horizontal
-                ctx.fillStyle = '#7a603f';
-                ctx.shadowColor = '#4f3d25';
-                ctx.shadowBlur = 8 * scale;
-                ctx.fillRect(45 * scale, 180 * scale, canvas.width - 90 * scale, 18 * scale);
-                ctx.fillStyle = '#ab8b5a';
-                ctx.fillRect(45 * scale, 183 * scale, canvas.width - 90 * scale, 6 * scale);
+                // Palang horizontal - posisi pas
+                ctx.fillStyle = '#7d623d';
+                ctx.shadowColor = '#5a432a';
+                ctx.shadowBlur = 6;
+                ctx.fillRect(35, 150, canvas.width - 70, 16);
+                ctx.fillStyle = '#b5925c';
+                ctx.fillRect(35, 153, canvas.width - 70, 6);
                 ctx.shadowBlur = 0;
 
-                // 5 TIANG
-                const startX = 160 * scale;
-                const gap = 100 * scale;
-                const topY = 45 * scale;
-                const bottomY = canvas.height - 50 * scale;
+                // 5 TIANG - center dengan perhitungan agar tidak condong
+                const startX = 80; // geser ke kiri agar center
+                const gap = 85; // jarak antar tiang
+                const totalWidth = (4 * gap) + 50; // perkiraan lebar total
+                const offset = (canvas.width - totalWidth) / 2; // untuk center
+                const adjustedStartX = offset + 20;
+
+                const topY = 35;
+                const bottomY = canvas.height - 40; // beri ruang bawah agar beads tidak keluar
 
                 for (let t = 0; t < 5; t++) {
-                    const x = startX + t * gap;
-                    ctx.shadowBlur = 8 * scale;
-                    ctx.shadowColor = '#4f3a20';
-                    ctx.lineWidth = 20 * scale;
-                    ctx.strokeStyle = '#7b613f';
+                    const x = adjustedStartX + t * gap;
+                    
+                    // Tiang kayu
+                    ctx.shadowBlur = 6;
+                    ctx.shadowColor = '#5a432a';
+                    ctx.lineWidth = 16;
+                    ctx.strokeStyle = '#7d623d';
                     ctx.beginPath();
                     ctx.moveTo(x, topY);
                     ctx.lineTo(x, bottomY);
                     ctx.stroke();
                     
-                    ctx.lineWidth = 6 * scale;
-                    ctx.strokeStyle = '#a88752';
+                    // Highlight tiang
+                    ctx.lineWidth = 5;
+                    ctx.strokeStyle = '#b5925c';
                     ctx.beginPath();
-                    ctx.moveTo(x - 3 * scale, topY + 15 * scale);
-                    ctx.lineTo(x - 3 * scale, bottomY - 15 * scale);
+                    ctx.moveTo(x - 2, topY + 15);
+                    ctx.lineTo(x - 2, bottomY - 15);
                     ctx.stroke();
                 }
 
-                // MANIK - diameter proporsional
+                // MANIK
                 const numStr = number.toString().padStart(5, '0');
                 for (let col = 0; col < 5; col++) {
                     const digit = parseInt(numStr[col], 10);
                     const topActive = digit >= 5 ? 1 : 0;
                     const bottomActive = digit % 5;
-                    const xCenter = startX + col * gap;
+                    const xCenter = adjustedStartX + col * gap;
 
-                    // Manik atas
-                    const yTop = 110 * scale;
-                    ctx.shadowBlur = 10 * scale;
-                    ctx.shadowColor = '#4f3a1f';
+                    // Manik atas - posisi di atas palang
+                    const yTop = 95;
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = '#5a432a';
 
-                    const gradTop = ctx.createRadialGradient(xCenter - 4 * scale, yTop - 6 * scale, 8 * scale, xCenter, yTop, 34 * scale);
+                    const gradTop = ctx.createRadialGradient(xCenter - 3, yTop - 5, 6, xCenter, yTop, 30);
                     if (topActive) {
                         gradTop.addColorStop(0, '#ffecb3');
-                        gradTop.addColorStop(0.5, '#e5b048');
-                        gradTop.addColorStop(1, '#b07d34');
+                        gradTop.addColorStop(0.5, '#e8b44e');
+                        gradTop.addColorStop(1, '#b8863a');
                     } else {
                         gradTop.addColorStop(0, '#d9bc8b');
                         gradTop.addColorStop(0.6, '#b08d56');
@@ -576,20 +529,24 @@
                     }
                     ctx.fillStyle = gradTop;
                     ctx.beginPath();
-                    ctx.ellipse(xCenter, yTop, 26 * scale, 28 * scale, 0, 0, Math.PI * 2);
+                    ctx.ellipse(xCenter, yTop, 22, 24, 0, 0, Math.PI * 2);
                     ctx.fill();
-                    ctx.strokeStyle = '#624a28';
-                    ctx.lineWidth = 2.5 * scale;
+                    ctx.strokeStyle = '#7d5e36';
+                    ctx.lineWidth = 2;
                     ctx.stroke();
 
-                    // Manik bawah
-                    const startBottom = 235 * scale;
-                    const step = 60 * scale;
+                    // Manik bawah - 4 beads dengan jarak pas, tidak melewati frame bawah
+                    const startBottom = 185; // mulai dari bawah palang
+                    const step = 45; // jarak antar manik (cukup untuk 4 beads dalam frame)
                     for (let m = 0; m < 4; m++) {
                         let yPos = startBottom + m * step;
+                        // Pastikan tidak melewati batas bawah
+                        if (yPos + 24 > canvas.height - 20) {
+                            yPos = canvas.height - 44; // adjust jika perlu
+                        }
                         const aktif = m < bottomActive;
 
-                        const gradBottom = ctx.createRadialGradient(xCenter - 4 * scale, yPos - 6 * scale, 8 * scale, xCenter, yPos, 34 * scale);
+                        const gradBottom = ctx.createRadialGradient(xCenter - 3, yPos - 5, 6, xCenter, yPos, 30);
                         if (aktif) {
                             gradBottom.addColorStop(0, '#ffedb3');
                             gradBottom.addColorStop(0.5, '#e8b44e');
@@ -600,12 +557,12 @@
                             gradBottom.addColorStop(1, '#8a663a');
                         }
                         ctx.fillStyle = gradBottom;
-                        ctx.shadowBlur = 12 * scale;
+                        ctx.shadowBlur = 8;
                         ctx.beginPath();
-                        ctx.ellipse(xCenter, yPos, 26 * scale, 28 * scale, 0, 0, Math.PI * 2);
+                        ctx.ellipse(xCenter, yPos, 22, 24, 0, 0, Math.PI * 2);
                         ctx.fill();
-                        ctx.strokeStyle = '#624a28';
-                        ctx.lineWidth = 2.5 * scale;
+                        ctx.strokeStyle = '#7d5e36';
+                        ctx.lineWidth = 2;
                         ctx.stroke();
                     }
                 }
@@ -622,7 +579,7 @@
                 nextBtn.disabled = currentIndex === TOTAL_CARDS - 1;
             }
 
-            // Timer
+            // Timer functions
             function formatTime(sec) {
                 return `${Math.floor(sec/60).toString().padStart(2,'0')}:${(sec%60).toString().padStart(2,'0')}`;
             }
@@ -642,10 +599,9 @@
                 finished = true;
                 prevBtn.disabled = true;
                 nextBtn.disabled = true;
-                infoPanel.innerHTML = '<div style="color: #86644c;">Time expired · Press Restart</div>';
+                infoPanel.innerHTML = 'Time expired · Restart';
             }
 
-            // RESTART mereset ke 0 - sempoa kosong (angka 0)
             function restartToZero() {
                 clearInterval(timerInterval);
                 timeLeft = 60;
@@ -653,13 +609,9 @@
                 timerActive = true;
                 finished = false;
                 infoPanel.innerHTML = '';
-
-                // SET ANGKA PERTAMA MENJADI 0 (sempoa kosong)
                 currentNumbers = Array(TOTAL_CARDS).fill(0);
-                
                 updateTimer();
                 refreshCard();
-
                 prevBtn.disabled = true;
                 nextBtn.disabled = false;
 
@@ -675,7 +627,6 @@
                 }, 1000);
             }
 
-            // Fungsi untuk memulai dengan angka random
             function startWithRandom() {
                 clearInterval(timerInterval);
                 timeLeft = 60;
@@ -683,12 +634,9 @@
                 timerActive = true;
                 finished = false;
                 infoPanel.innerHTML = '';
-
                 currentNumbers = generateRandomNumbers(currentDigitMode);
-                
                 updateTimer();
                 refreshCard();
-
                 prevBtn.disabled = true;
                 nextBtn.disabled = false;
 
@@ -717,7 +665,6 @@
             goBtn.addEventListener('click', () => {
                 homeScreen.style.display = 'none';
                 flashcardScreen.style.display = 'block';
-                resizeCanvas();
 
                 digitOptions.forEach(opt => {
                     opt.classList.remove('active');
@@ -739,13 +686,6 @@
             prevBtn.addEventListener('click', () => changeCard(-1));
             nextBtn.addEventListener('click', () => changeCard(1));
             restartBtn.addEventListener('click', restartToZero);
-
-            // Handle resize
-            window.addEventListener('resize', () => {
-                if (flashcardScreen.style.display === 'block') {
-                    resizeCanvas();
-                }
-            });
 
             flashcardScreen.style.display = 'none';
         })();
