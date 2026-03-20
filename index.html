@@ -211,16 +211,16 @@
             border: none;
         }
 
-        /* Angka display - berada di dalam frame coklat, tidak melewati */
+        /* Angka display - diperkecil */
         .number-display {
             text-align: center;
-            font-size: 2.8rem;
+            font-size: 2.2rem; /* diperkecil dari 2.8rem */
             font-weight: 600;
             color: #3a3128;
             background: #f3ede4;
-            margin: 16px 30px 0; /* dikurangi margin agar tidak melewati frame */
+            margin: 16px 30px 0;
             border-radius: 50px;
-            padding: 6px 0;
+            padding: 4px 0; /* padding lebih kecil */
             border: 1px solid #cfbc9b;
             font-family: 'Inter', 'Times New Roman', serif;
             box-shadow: inset 0 1px 5px #fffcf0, 0 5px 12px rgba(80, 60, 35, 0.15);
@@ -321,8 +321,8 @@
                 font-size: 2rem;
             }
             .number-display {
-                font-size: 2.2rem;
-                margin: 12px 15px 0; /* lebih kecil di mobile */
+                font-size: 1.8rem; /* lebih kecil di mobile */
+                margin: 12px 15px 0;
             }
             .timer {
                 font-size: 1.2rem;
@@ -367,10 +367,10 @@
                 </div>
             </div>
 
-            <!-- Kartu dengan sempoa mewah -->
+            <!-- Kartu dengan sempoa mewah - canvas diperbesar -->
             <div class="wood-card">
                 <div class="canvas-wrapper">
-                    <canvas id="sorobanCanvas" width="500" height="420"></canvas>
+                    <canvas id="sorobanCanvas" width="550" height="460"></canvas> <!-- dimensi diperbesar -->
                 </div>
                 <div class="number-display" id="angkaDisplay">0</div>
             </div>
@@ -437,15 +437,15 @@
                 );
             }
 
-            // GAMBAR SEMPOA LUXURY - tanpa garis horizontal di background
+            // GAMBAR SEMPOA LUXURY - disesuaikan dengan ukuran canvas baru
             function drawSoroban(number) {
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-                // Soft textured linen background (tanpa garis)
+                // Soft textured linen background
                 ctx.fillStyle = '#f2e6d8';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
                 
-                // hanya tekstur titik-titik halus, tidak ada garis
+                // tekstur titik-titik halus
                 ctx.fillStyle = '#e8d9c4';
                 for (let i = 0; i < 150; i++) {
                     ctx.globalAlpha = 0.02;
@@ -455,40 +455,39 @@
                 }
                 ctx.globalAlpha = 1;
 
-                // Deep walnut frame with polished finish
+                // Deep walnut frame
                 ctx.strokeStyle = '#5c4934';
                 ctx.lineWidth = 12;
                 ctx.strokeRect(6, 6, canvas.width - 12, canvas.height - 12);
                 
-                // inner highlight on frame
                 ctx.strokeStyle = '#c9b18b';
                 ctx.lineWidth = 2;
                 ctx.strokeRect(10, 10, canvas.width - 20, canvas.height - 20);
 
-                // Antique brass beam
+                // Antique brass beam - posisi disesuaikan dengan canvas yang lebih besar
                 ctx.shadowColor = '#b57c48';
                 ctx.shadowBlur = 10;
                 
-                const beamGrad = ctx.createLinearGradient(30, 160, canvas.width - 30, 160);
+                const beamGrad = ctx.createLinearGradient(30, 180, canvas.width - 30, 180);
                 beamGrad.addColorStop(0, '#b89a6b');
                 beamGrad.addColorStop(0.3, '#e8d09c');
                 beamGrad.addColorStop(0.7, '#c8a875');
                 beamGrad.addColorStop(1, '#9e7f54');
                 ctx.fillStyle = beamGrad;
-                ctx.fillRect(30, 158, canvas.width - 60, 12);
+                ctx.fillRect(30, 178, canvas.width - 60, 12);
                 
                 ctx.fillStyle = '#f8e8b0';
                 ctx.globalAlpha = 0.3;
-                ctx.fillRect(30, 160, canvas.width - 60, 3);
+                ctx.fillRect(30, 180, canvas.width - 60, 3);
                 ctx.globalAlpha = 1;
                 ctx.shadowBlur = 0;
 
-                // 5 columns - walnut rods
-                const gap = 85;
+                // 5 columns - walnut rods dengan jarak proporsional
+                const gap = 90; // sedikit lebih besar
                 const totalWidth = 4 * gap;
-                const startX = (canvas.width - totalWidth) / 2 - 5;
+                const startX = (canvas.width - totalWidth) / 2;
                 const topY = 35;
-                const bottomY = canvas.height - 40;
+                const bottomY = canvas.height - 45;
 
                 for (let t = 0; t < 5; t++) {
                     const x = startX + t * gap;
@@ -518,7 +517,7 @@
                     ctx.globalAlpha = 1;
                 }
 
-                // Beads
+                // Beads dengan ukuran proporsional
                 const numStr = number.toString().padStart(5, '0');
                 for (let col = 0; col < 5; col++) {
                     const digit = parseInt(numStr[col], 10);
@@ -527,7 +526,7 @@
                     const xCenter = startX + col * gap;
 
                     // MANIK ATAS
-                    const yTop = 105;
+                    const yTop = 120; // disesuaikan
                     ctx.shadowBlur = 15;
                     ctx.shadowColor = '#b57c48';
 
@@ -557,8 +556,8 @@
                     ctx.fill();
 
                     // MANIK BAWAH
-                    const startBottom = 195;
-                    const step = 48;
+                    const startBottom = 215; // disesuaikan
+                    const step = 50;
                     
                     for (let m = 0; m < 4; m++) {
                         let yPos = startBottom + m * step;
